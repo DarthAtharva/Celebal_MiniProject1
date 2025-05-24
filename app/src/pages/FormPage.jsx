@@ -65,7 +65,7 @@ export default function FormPage() {
                             Create Your Account
                         </h2>
                         <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-                            Please fill in all required information to register
+                            <strong className="text-red-400">NOTE:</strong> All fields are mandatory
                         </p>
                     </div>
 
@@ -82,7 +82,7 @@ export default function FormPage() {
                                     autoFocus
                                     autoComplete="given-name"
                                     spellCheck="false"
-                                    maxLength="20"
+                                    maxLength="15"
                                     title="First name should only contain letters and be up to 15 characters long."
                                     id="firstName"
                                     type="text" 
@@ -102,6 +102,7 @@ export default function FormPage() {
                                     value={form.lastName}
                                     autoComplete="family-name"
                                     spellCheck="false"
+                                    maxLength="15"
                                     title="Last name should only contain letters and be up to 15 characters long."
                                     id="lastName"
                                     type="text" 
@@ -123,6 +124,7 @@ export default function FormPage() {
                                 value={form.userName}
                                 autoComplete="username" 
                                 spellCheck="false"
+                                maxLength="15"
                                 title="Username should only contain letters, numbers, _ and be up to 15 characters long."
                                 id="userName"
                                 type="text" 
