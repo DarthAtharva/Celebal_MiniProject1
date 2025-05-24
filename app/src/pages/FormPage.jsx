@@ -58,14 +58,16 @@ export default function FormPage() {
 
     return (
         <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-12 px-4 sm:px-6 lg:px-8">
+
             <div className="max-w-2xl mx-auto">
                 <div className="bg-white dark:bg-gray-800 shadow-xl rounded-lg p-8">
                     <div className="text-center mb-8">
-                        <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
+                        <h2 className="text-3xl mb-8 font-bold text-gray-900 dark:text-white">
                             Create Your Account
                         </h2>
-                        <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-                            <strong className="text-red-400">NOTE:</strong> All fields are mandatory
+                        <p className="flex justify-between mt-2 text-md text-gray-600 dark:text-gray-400">
+                            <p><strong className="text-red-400">NOTE:</strong> All fields are mandatory</p>
+                            <p><strong className="text-blue-400">GitHub LINK:</strong><a href="https://github.com/DarthAtharva/Celebal_MiniProject1"> Source code</a></p>
                         </p>
                     </div>
 
