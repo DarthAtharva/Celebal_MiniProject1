@@ -83,6 +83,7 @@ export default function FormPage() {
                                     autoComplete="given-name"
                                     spellCheck="false"
                                     maxLength="15"
+                                    pattern="[A-Za-z]{1,15}"
                                     title="First name should only contain letters and be up to 15 characters long."
                                     id="firstName"
                                     type="text" 
@@ -103,6 +104,7 @@ export default function FormPage() {
                                     autoComplete="family-name"
                                     spellCheck="false"
                                     maxLength="15"
+                                    pattern="[A-Za-z]{1,15}"
                                     title="Last name should only contain letters and be up to 15 characters long."
                                     id="lastName"
                                     type="text" 
@@ -125,6 +127,7 @@ export default function FormPage() {
                                 autoComplete="username" 
                                 spellCheck="false"
                                 maxLength="15"
+                                pattern="^[A-Za-z0-9_]{1,15}$"
                                 title="Username should only contain letters, numbers, _ and be up to 15 characters long."
                                 id="userName"
                                 type="text" 
@@ -146,6 +149,7 @@ export default function FormPage() {
                                 autoComplete="email" 
                                 spellCheck="false"
                                 maxLength={50}
+                                pattern="^\S+@\S+\.\S+$"
                                 title="Enter valid email"
                                 id="email"
                                 type="email" 
@@ -167,6 +171,7 @@ export default function FormPage() {
                                     value={form.password}
                                     spellCheck="false"
                                     minLength={8}
+                                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
                                     title="Password must be atleast 8 characters long and contain atleast one lowercase letter, uppercase letter, digit and special character (@ $ ! % * ? &)"
                                     id="password"
                                     type={form.showPassword ? "text" : "password"}
@@ -197,6 +202,8 @@ export default function FormPage() {
                                     <select 
                                         name="country" 
                                         value={form.country}
+                                        pattern="\d{7,15}"
+                                        title="Enter valid phone number"
                                         id="country"
                                         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                         required
@@ -271,6 +278,7 @@ export default function FormPage() {
                                 <input 
                                     name="phoneNumber" 
                                     value={form.phoneNumber}
+                                    pattern="\d{7,15}"
                                     title="Enter valid phone number"
                                     id="phoneNumber"
                                     type="text" 
@@ -294,6 +302,7 @@ export default function FormPage() {
                                         value={form.panNumber}
                                         spellCheck="false"
                                         minLength={10}
+                                        pattern="^[A-Z]{5}[0-9]{4}[A-Z]$"
                                         title="Enter valid PAN (e.g ABCDE13234F)"
                                         id="panNumber"
                                         type="text" 
@@ -312,6 +321,7 @@ export default function FormPage() {
                                         value={form.aadharNumber}
                                         spellCheck="false"
                                         minLength={12}
+                                        pattern="^\d{12}$"
                                         title="Enter valid 12-digit Aadhar"
                                         id="aadharNumber"
                                         type="text" 
